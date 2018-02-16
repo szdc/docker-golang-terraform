@@ -1,9 +1,6 @@
-FROM golang:1.9
+FROM golang:1.9-alpine
 
 ENV DEBIAN_FRONTEND noninteractive
-
-# Remove sh
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Install terraform
 ENV TERRAFORM_VERSION=0.11.3
