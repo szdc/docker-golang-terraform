@@ -2,7 +2,14 @@ FROM golang:1.9-alpine
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apk add --update git bash openssh zip unzip
+RUN apk add --update \
+        git \
+        bash \
+        openssh \
+        zip \
+        unzip \
+        gcc \
+        musl-dev
 
 # Install terraform
 ENV TERRAFORM_VERSION=0.11.3
